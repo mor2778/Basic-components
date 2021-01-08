@@ -1,0 +1,151 @@
+body {
+  background-color: #4fa2ad;
+  font-family: "Kumbh Sans";
+  overflow: hidden;
+
+}
+
+.background-1 {
+  position: absolute;
+  left: 0px;
+  top: -320px;
+  z-index: -1;
+}
+
+@media all and (max-width: 480px) {
+  .background-1 {
+    display: none;
+  }
+
+  .background-2 {
+    display: none;
+  }
+}
+
+.background-2 {
+  position: absolute;
+  right: -150px;
+  bottom: -550px;
+  z-index: -1;
+}
+
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15vh;
+
+}
+
+.card {
+  display: grid;
+  text-align: center;
+  align-content: center;
+  grid-template-columns: 350px;
+  grid-template-rows: 90px 100px 90px 80px;
+  grid-template-areas: "background" "circle-img" "body" "fotter";
+  background: white;
+  border-radius: 10px;
+}
+
+/* ********************/
+/**** card-header ****/
+/*********************/
+
+.card-background img {
+  border-radius: 10px 10px 0px 0px ;
+}
+
+.circle-img {
+  border: 3px solid white;
+  border-radius: 70px;
+  -moz-border-radius: 70px;
+  -webkit-border-radius: 70px;
+  background-image: url('images/image-victor.jpg');
+}
+
+
+/*********************/
+/***** card-body *****/
+/*********************/
+
+/* card-title */
+
+.card-background {
+  grid-area: "background";
+
+}
+.card-circle-img{
+  grid-area: "circle-img";
+  width: 95px;
+  height: 95px;
+  border: 3px solid white;
+  border-radius: 70px;
+  -moz-border-radius: 70px;
+  -webkit-border-radius: 70px;
+  background-image: url('images/image-victor.jpg');
+  margin: auto;
+}
+
+.card-body {
+  grid-area: "body";
+  text-align: center;
+  margin-top: 20px;
+}
+
+.card-body .name {
+  font-weight: 700;
+}
+
+.card-body .age {
+  margin-left: 10px;
+  font-weight: 400;
+  color: grey;
+}
+
+.card-body .city {
+  font-size: 14px;
+  color: grey;
+}
+
+/***********************/
+/***** card-fotter *****/
+/***********************/
+
+.card-fotter {
+  grid-area: "fotter";
+  display: grid;
+  grid-template-columns: 60px 60px 60px;
+  grid-template-rows: 80px;
+  grid-template-areas: "followers" "likes" "photos";
+  align-items: center;
+  justify-content: space-around;
+  border-top: 1px solid Gainsboro;
+}
+
+.card-fotter .followers {
+  grid-area: "followers";
+}
+
+.card-fotter .likes {
+  grid-area: "likes";
+
+}
+
+.card-fotter .photos {
+  grid-area: "photos";
+}
+.card-fotter span:first-child {
+  font-size:18px;
+  font-weight: 700;
+}
+
+.card-fotter span:last-child {
+  font-size:12px;
+  font-weight: 400;
+  color: grey;
+}
+
+.attribution { font-size: 11px; text-align: center; margin-top: 20px; }
+.attribution a { color: hsl(228, 45%, 44%); }
